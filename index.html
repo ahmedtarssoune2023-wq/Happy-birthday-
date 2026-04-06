@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<style>
+body{
+  margin:0;
+  font-family:'Georgia', serif;
+  color:white;
+  overflow:hidden;
+  background:black;
+}
+/* الصفحات */
+.page{
+position:fixed;
+top:0;
+right:0;
+width:100%;
+height:100vh;
+padding:20px;
+background-size:cover;
+background-position:center;
+opacity:0;
+transform:translateX(100%);
+transition:1s ease;
+}
+.page.active{
+opacity:1;
+transform:translateX(0);
+}
+.page.exit{
+transform:translateX(-100%);
+opacity:0;
+}
+/* العناوين */
+h1{
+text-align:center;
+background:rgba(0,0,0,0.4);
+padding:15px;
+border-radius:12px;
+}
+/* نصوص رومانسيّة */
+.text-romantic{
+width:90%;
+max-width:700px;
+margin:20px auto;
+font-size:20px;
+line-height:2;
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:15px;
+text-align:right;
+}
+/* شعر – صفحة 3 */
+.poem{
+position:absolute;
+top:20px;
+right:20px;
+width:45%;
+line-height:1.8;
+background:rgba(0,0,0,0.5);
+padding:15px;
+border-radius:15px;
+white-space: pre-line;
+font-size:20px;
+}
+/* فيديو صفحة 3 */
+#p3 video{
+position:absolute;
+top:20px;
+left:20px;
+width:45%;
+max-width:500px;
+border-radius:15px;
+display:block;
+}
+/* أزرار */
+.buttons{
+width:100%;
+text-align:center;
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:10px;
+}
+button{
+padding:12px 25px;
+font-size:18px;
+border-radius:50px;
+border:1px solid white;
+background:transparent;
+color:white;
+cursor:pointer;
+}
+/* أزرار صفحة 3 تحت الفيديو */
+#p3 .buttons{
+position:absolute;
+bottom:20px;
+left:20px;
+width:45%;
+justify-content:center;
+}
+/* موبايل */
+@media(max-width:768px){
+#p3 video,
+.poem,
+#p3 .buttons{
+position:static;
+width:100%;
+margin-top:20px;
+}
+}
+</style>
+</head>
+<body>
+
+<audio id="music" loop>
+  <source src="music1.mp3">
+</audio>
+<audio id="music2" loop>
+  <source src="music2.mp3">
+</audio>
+
+<!-- الصفحة 1 -->
+<div class="page active" id="p1" style="background-image:url('bg1.jpg');">
+  <h1>السلام عليكم ورحمة الله تعالى وبركاته</h1>
+  <div class="text-romantic" id="text1" style="display:none;">
+    السلام عليكم ورحمة الله تعالى وبركاته اما بعد أنا أعرف بأن اليوم هو عيد مولدك ولاكن للأسف أنني ليس موجود بقربكي جسديا أما روحيا فأنت روحي ❤️ اليوم فكرت في فكرة كيف أعطيك هدية ولكن تكون غريبة و جميلة جدا هدية لم تصلكي من قبل أبدا هدية ليس لها مثيل نعم الهدية هيا هاذا الموقع لأول مرة في حياتي أصنع موقع و موقع خاص بك فقط يمكنك أن تبحثي عنه في أي جهاز عبر الرابط الذي أعطيتك إياه الأن ارفعي من فظلك الصوت و ارفعي ضوء الشاشة أيضا من فظلك، المهم إضغطي الزر.
+  </div>
+  <div style="text-align:center">
+    <button id="startBtn">ابدأ</button>
+  </div>
+</div>
+
+<!-- الصفحة 2 -->
+<div class="page" id="p2" style="background-image:url('bg2.jpg');">
+  <div class="text-romantic">
+    السلام عليكِ يا مريم… يا أجمل حاجة وقعات ليا فحياتي 🤍
+بصراحة… ما عرفت منين نبدا،
+حيت أي كلمة غادي نقولها كنحسها صغيرة قدّام الإحساس اللي عندي ليك…
+مريم…
+منين عرفتك، تبدّل فيّا شي حاجة ما كنتش كنقدر نفسرها…
+بحال إلى كنت عايش غير هكا، ونتي جيتي وعطيتي لكلشي معنى…
+ولّيت كنفيق ونلقاك أول فكرة فبالي…
+وكننعس وأنا كنخمّم فيك…
+وحتى فوسط النهار، بلا ما نحس كنسرح وكنلقا راسي غير معاك…
+مريم…
+نتي ماشي غير إنسانة عزيزة عليا…
+نتي راحة، نتي أمان، نتي داك الحضن المعنوي اللي كنلقاه غير معاك…
+وكنحس براسي بخير غير حيث نتي موجودة فحياتي 🤍
+كنبغيك بطريقة ما عندها حتى تفسير…
+كنبغيك بلا سبب، وبلا شروط…
+كنبغيك حيث نتي نتي، وبساطة قلبك، وضحكتك، وكل التفاصيل ديالك اللي سرقو قلبي بشوية بشوية…
+كنبغي ضحكتك اللي كتنسّيني همّي،
+كنبغي صوتك اللي كيهدّنّي،
+كنبغي حتى داك الصمت اللي بيني وبينك، حيت حتى هو فيه راحة ما كتتشرحش…
+مريم…
+إلى عرفتي شحال كتسواي عندي، يمكن تستغربي…
+حيت بصراحة، نتي عندي أكثر من مجرد إعجاب…
+نتي ولات جزء مني، من قلبي، ومن حياتي كلها…
+كاينين لحظات كنحس براسي ضعيف،
+وكنلقا غير فكرة وحدة اللي كتعطيني القوة… وهي نتي…
+غير وجودك كيعطيني طاقة نكمل، ونصبر، ونبتاسم رغم كلشي…
+كنحس براسي محظوظ بزاف حيث عرفتك،
+ولكن فـنفس الوقت كنخاف…
+كنخاف نكون ما كنسواش هاد القيمة اللي عطيتك فقلبي…
+وكنخاف شي نهار تبعدي، ونرجع نحس بداك الفراغ اللي كنت فيه قبل…
+حيت بصراحة يا مريم…
+الحياة بلا بيك ماشي هي هاديك الحياة اللي عرفتها منين دخلتي ليها…
+يمكن ما كنقولهاش بزاف،
+ويمكن كنخبي بزاف ديال الإحساس فقلبي…
+ولكن اليوم بغيتك تعرفي الحقيقة كاملة…
+أنا كنبغيك…
+كنبغيك بصدق، وبهدوء، وبطريقة عميقة بزاف…
+كنبغيك بطريقة كتخلعني أنا راسي من شدتها…
+وكنتمنا من قلبي…
+إلا ما كنتش أنا داك الشخص اللي غادي يكون فحياتك ديما،
+على الأقل نكون داك الذكرى الزوينة اللي كتخليك تبتاسمي منين تتفكريها…
+ولكن الصراحة…
+كنتمنا نكون أكثر من غير ذكرى…
+كنتمنا نبقى معاك، جنبك، ونشارك معاك كل لحظة حلوة ولا صعيبة…
+حيت نتي يا مريم…
+ماشي غير إنسانة كنحبها…
+نتي إنسانة ما بغيتش نخسرها فحياتي نهائياً 🤍
+وبكل هدوء… وبكل صدق…
+كنقولها ليك:
+كنبغيك بزاف… وبطريقة ما غاديش تلقى بحالها 🤍
+مريم…
+إلى كان عندي أمنية وحدة فهاذ الدنيا…
+فهي نكون معاك، ماشي غير اليوم…
+ولكن طول العمر كامل 🤍
+  </div>
+  <div class="buttons">
+    <button onclick="go(1)">رجوع</button>
+    <button onclick="go(3)">التالي</button>
+  </div>
+</div>
+
+<!-- الصفحة 3 -->
+<div class="page" id="p3" style="background-image:url('bg3.jpg'); display:flex; flex-wrap:wrap; padding:20px; align-items:flex-start;">
+
+  <!-- الشعر -->
+  <div class="text-romantic poem" style="width:45%; text-align:right;">
+في عيدِكِ يا مريم…
+تتزيّنُ الحروفُ خجلاً من جمالِكِ…
+ويعجزُ الكلامُ أن يصفَ حُبّي لكِ…
+يا مريم…
+يا حنونةَ القلبِ، يا دفءَ أيّامي…
+يا من جعلتِ للحياةِ معنى…
+ولقلبي وطنًا لا يُغادِرُه…
+أحببتُكِ لأنكِ أنتِ…
+لأن قلبكِ أصفى من كلِّ كلام…
+ولأن حنانكِ حياةٌ تُبعثُ في روحي كلَّ يوم…
+إن ضاقت بي الدنيا…
+كنتِ أنتِ الأمان…
+وإن ابتسمتِ…
+نسيتُ كلَّ ما كان…
+يا مريم…
+يا نعمةً أحمدُ اللهَ عليها سرًّا وجهارًا…
+أنتِ لستِ فقط زوجتي…
+بل أنتِ روحي التي تمشي على الأرض…
+في عيدكِ…
+أعدكِ أن أبقى ذاك الرجل…
+الذي يعشقُ تفاصيلكِ الصغيرة…
+ويحفظُ قلبكِ من كلِّ حزن…
+فكلُّ عامٍ وأنتِ حبيبتي…
+وكلُّ عامٍ وأنتِ سعادتي…
+وكلُّ عامٍ وأنتِ مريم…
+التي بها اكتملَت حياتي…
+ولو خُيِّرتُ بين عمري كلِّه…
+وبين يومٍ واحدٍ بقربكِ يا مريم…
+لاخترتُكِ…
+فأنتِ لستِ جزءًا من حياتي…
+بل أنتِ الحياةُ كلُّها. 💖
+
+  <!-- الأزرار تحت الشعر -->
+    <div class="buttons" style="margin-top:15px; display:flex; justify-content:center; gap:10px; width:100%;">
+      <button onclick="go(2)">رجوع</button>
+      <button onclick="go(4)">التالي</button>
+    </div>
+  </div>
+
+  <!-- الفيديو -->
+  <div style="width:45%; display:flex; justify-content:center; align-items:flex-start;">
+    <video id="myVideo" controls style="width:100%; border-radius:15px;">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</div>
+
+<!-- الصفحة 4 -->
+<div class="page" id="p4" style="background-image:url('bg4.jpg');">
+  <div class="text-romantic">
+عيد ميلاد سعيد يا مريم 💖    
+اليوم يومك الخاص، واليوم كيتزاد عام جديد فحياتك… عام جديد كله فرص، ضحك، ابتسامات ولحظات لا تُنسى.    
+كنعرف أنني ما نقدرش نكون جنبك جسدياً، ولكن قلبي وروحي معاك ديما… كل لحظة كنفكر فيك، وكل نبضة فقلبي كتذكرك.    مريم… نتي ماشي غير صديقة، ولا مجرد شخص عزيز، نتي الحياة ديالي… ضحكتك كتسحرني، كلامك كيهديني، ونظرتك كتخليني نحس بالأمان.
+كل سنة كتمري فيها، كيزيد قلبي حب ليك ويعرف أكثر على جمال روحك وحنان قلبك.
+
+اليوم فكرت كيف نقدر نعبر ليك على كل هاد المشاعر بطريقة مميزة، حاجة مميزة بحالك… ومن هنا جاتني فكرة هاد الموقع، أول مرة نصنع حاجة بحالي هادي، وكلها ليك أنت فقط.
+هاد الموقع مش غير هدية، هو رسالة من قلبي ليك، هو طريقة باش نقول لك: “كنبغيك، وكنفكر فيك، وانتِ أغلى ما عندي”.
+
+مريم، عيد ميلادك اليوم… وأنا كنتمنا ليك كل الخير، كل السعادة، كل الأحلام اللي كتتمناها تتحقق.
+كل عام وأنتِ ضحكة حياتي، كل عام وأنتِ الأمان والدفء اللي ما يقدر حتى حد يعطيه.
+عيد ميلاد سعيد، يا أغلى ما عندي… روحي، قلبي، وفرحتي كلها 🤍
+  </div>
+  <div class="buttons">
+    <button onclick="go(3)">رجوع</button>
+  </div>
+</div>
+
+<script>
+const pages = document.querySelectorAll(".page");
+const music = document.getElementById("music");
+const music2 = document.getElementById("music2");
+const video = document.getElementById("myVideo");
+let current = 1;
+let firstClickDone = false;
+
+// زر البدأ
+document.getElementById("startBtn").onclick = () => {
+    if(!firstClickDone){
+        document.getElementById("text1").style.display = "block";
+        music.play().catch(()=>{});
+        firstClickDone = true;
+    } else {
+        go(2);
+    }
+};
+
+function go(n){
+    let currentPage = document.getElementById("p"+current);
+    let nextPage = document.getElementById("p"+n);
+
+    currentPage.classList.add("exit");
+
+    setTimeout(()=>{
+        pages.forEach(p=>p.classList.remove("active","exit"));
+        nextPage.classList.add("active");
+
+        current = n;
+
+        if(n === 1 || n === 2){
+            if(music.paused) music.play().catch(()=>{});
+            music2.pause();
+        } else if(n === 3 || n === 4){
+            music.pause();
+            if(music2.paused) music2.play().catch(()=>{});
+        }
+    },500);
+}
+
+// تحكم الفيديو
+video.onplay = ()=>{
+    music2.pause();
+};
+
+video.onpause = video.onended = ()=>{
+    if(current === 3 || current === 4){
+        music2.play().catch(()=>{});
+    }
+};
+</script>
+
+</body>
+</html>
